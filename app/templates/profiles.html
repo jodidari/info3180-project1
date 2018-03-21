@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %} All Profiles {% endblock %}
+{% block css %}
+<link href="{{ url_for('static', filename='css/profiles.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block main %}
+<h1 class="page-header">All Profiles</h1>
+{% for user in users %}
+    <div class="profile">
+    <hr class="top"/>
+        <div class="photo">
+            <img id = "profilepic" src="{{ url_for('static', filename='uploads/'+user.filename) }}"></img>
+        </div>
+        <div class="info">
+            <h3><span class="bold">{{user.firstname}} {{ user.lastname }}</span></h3>
+            <p><span class = "bold">Gender:</span> {{ user.gender }} </p>
+            <p><span class = "bold">Location:</span> {{ user.location }} </p>
+            <div><a href="{{ url_for('user_profile', id= user.id ) }}"><button type="btn btn-succes btn-md">View Profile</button></a></div>
+        	</div>
+        </div>
+
+      
+{% endfor %}
+{% endblock %}
+

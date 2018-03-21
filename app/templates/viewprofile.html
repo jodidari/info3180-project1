@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}User Profile{% endblock %}
+
+{% block css %}
+<link href="{{ url_for('static', filename='css/userprofile.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block main %}
+  {% for image_name in imagenames %}
+    {% if user.filename == image_name %}
+      <div id="profile">
+        <div class="content">    
+          <div>
+            <div>
+                <img id="profileimg" src="{{url_for('static', filename='uploads/'+image_name)}}" alt="user photo" class="userimg">
+            </div>
+            <div>
+                <div>
+                  <h2>{{ user.firstname }} {{ user.lastname }}</h2>
+                </div>
+                  <hr>
+                <div class="info">
+                  <p><span></span>{{ user.email }}</p>
+                  <p><span></span>{{ user.location }}</p>
+                  <p><span></span>Joined on {{ user.date_joined.strftime("%B %d, %Y") }}</p>
+                </div>
+            </div>
+            <br>  
+          </div>
+          <div class="bio">
+              <h3>About me</h3>
+              <p>{{user.bio}}</p>
+          </div>
+          <div>
+              <button id="btn1" class="btn btn-success btn-md">Send Message</button>
+              <button id="btn2" class="btn btn-info btn-md">Follow</button>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+  
+{% endblock %}

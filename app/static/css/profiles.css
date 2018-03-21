@@ -1,0 +1,40 @@
+#profilepic
+{
+    padding: 15px;
+    float: left;
+    width: 250px;
+    height:250px;
+}
+
+#content {
+    background-color: white !important;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.info{
+    text-align: left;
+    margin-top: 50px;
+    color: lightgrey;
+    font-weight: bold;
+}
+
+body{
+    background-color: #DDF0FF;
+    font-size: 12px;
+    font-family: Arial;
+}
+
+top{
+color: #0000A0;
+border: solid 3px;
+}
+
+div.profile{
+    padding-bottom: 80px;
+    background-color: white;
+}
+
+h3{
+    color:black;
+}
