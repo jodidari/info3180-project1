@@ -55,7 +55,7 @@ def profile():
         db.session.add(user)
         db.session.commit()
         flash('File Saved','success')
-        return redirect(url_for('home'))
+        return redirect(url_for('profiles'))
     return render_template("profile.html", form=form)
 
 def allowed_file(filename):

@@ -17,19 +17,20 @@
             </div>
             <div>
                 <div>
-                  <h2>{{ user.firstname }} {{ user.lastname }}</h2>
+                  <h3>{{ user.firstname }} {{ user.lastname }}</h3>
                 </div>
-                  <hr>
                 <div class="info">
                   <p><span></span>{{ user.email }}</p>
                   <p><span></span>{{ user.location }}</p>
                   <p><span></span>Joined on {{ user.date_joined.strftime("%B %d, %Y") }}</p>
                 </div>
-            </div>
-            <br>  
+            </div>  
           </div>
+          <br>
+          <br>
+          <br>
           <div class="bio">
-              <h3>About me</h3>
+              <h5>About me</h5>
               <p>{{user.bio}}</p>
           </div>
           <div>
