@@ -10,14 +10,14 @@
   {% for image_name in imagenames %}
     {% if user.filename == image_name %}
       <div id="profile">
-        <div class="content">    
+        <div class="content">  
           <div>
             <div>
                 <img id="profileimg" src="{{url_for('static', filename='uploads/'+image_name)}}" alt="user photo" class="userimg">
             </div>
             <div>
                 <div>
-                  <h3>{{ user.firstname }} {{ user.lastname }}</h3>
+                  <h4>{{ user.firstname }} {{ user.lastname }}</h4>
                 </div>
                 <div class="info">
                   <p><span></span>{{ user.email }}</p>
